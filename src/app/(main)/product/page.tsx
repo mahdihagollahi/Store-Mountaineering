@@ -1,5 +1,6 @@
 import Navbar from '@/component/Navbar/Navbar'
 import Header from '@/component/Products/Header'
+import Product from '@/component/Products/Product'
 import React, { Fragment } from 'react'
 
 const page = () => {
@@ -7,6 +8,7 @@ const page = () => {
     <Fragment>
        <Header/>
        <Navbar/>
+       <Product/>
     </Fragment>
   )
 }
