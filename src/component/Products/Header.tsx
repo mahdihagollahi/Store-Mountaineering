@@ -4,7 +4,7 @@ import Image from "next/image";
 const Header = () => {
   return (
     <Fragment>
-      <div className="px-10 py-4 flex justify-between">
+      <div className="px-20 bg-white py-4 flex justify-between">
         <div className="flex items-center  gap-4 ">
           <div>
             <Image src={Logo} width={33} height={37} alt="" />
@@ -16,7 +16,9 @@ const Header = () => {
           </div>
         </div>
         <div className="">
-          <label className="input input-bordered flex items-center gap-2">
+          <label className="input input-bordered flex items-center gap-2" 
+          style={{background:'#f8f8f8'}}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16"
@@ -29,10 +31,11 @@ const Header = () => {
                 clipRule="evenodd"
               />
             </svg>
-            <input type="text" className="grow w-[591px] h-[48px] bg-[#F4F4F4] placeholder:text-[#A5A5A5] placeholder:text-base placeholder:font-medium" placeholder="جستجو" />
+            <input type="text" className="grow w-[591px] h-[48px]  placeholder:text-[#A5A5A5] placeholder:text-base placeholder:font-medium"  placeholder="جستجو" />
 
           </label>
         </div>
+      
       </div>
     </Fragment>
   );
