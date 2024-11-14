@@ -56,7 +56,7 @@ const ProductShow = ({ currentPageData, filledHeart, handleHeartClick }) => {
               viewBox="0 0 24 24"
               strokeWidth="1.5"
               stroke="currentColor"
-              className=" text-[#3A3A3A] absolute top-3   cursor-pointer   size-6 hover:fill-[#D20404]"
+              className=" text-[#3A3A3A] absolute top-3   cursor-pointer   size-7 hover:fill-[#D20404]"
               onClick={() => handleHeartClick(index)}
             >
               <path
