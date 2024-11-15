@@ -6,8 +6,7 @@ import Color from "@/assent/Imge/Product/ProductDetail/color.svg";
 import Plus from "@/assent/Imge/Product/ProductDetail/Plus.svg";
 import Link from "next/link";
 import ImageGallery from "./ImageProduct";
-
-
+import ProductFeature from "./ProductFeature";
 
 const ProductDetail = () => {
   const [counter, setCounter] = useState(0);
@@ -22,7 +21,7 @@ const ProductDetail = () => {
       setCounter(counter - 1);
     }
   }
- 
+
   return (
     <Fragment>
       <div className="px-20">
@@ -62,21 +61,23 @@ const ProductDetail = () => {
             </div>
             <Link href="/Resevaion/SetTime">
               <button className="mt-10 duration-300 bg-[#54896b] hover:bg-[#2E8B57] text-white w-[98%] h-12 rounded-xl">
-              افزودن به سبد خرید
+                افزودن به سبد خرید
               </button>
             </Link>
           </div>
           <div className="xl:-mt-10">
-            <ImageGallery Images={product.images}/>
+            <ImageGallery Images={product.images} />
           </div>
         </div>
         <div className="mt-40">
-          <p className="text-[#2E8B57] font-demiBold text-lg">
-            توضیحات
-          </p>
+          <p className="text-[#2E8B57] font-demiBold text-lg">توضیحات</p>
           <p className="font-regular mt-4  text-base text-[#727272]">
-              {product.description}
+            {product.description}
           </p>
+        </div>
+
+        <div className="mt-40">
+          <ProductFeature product={product}/>
         </div>
       </div>
     </Fragment>
