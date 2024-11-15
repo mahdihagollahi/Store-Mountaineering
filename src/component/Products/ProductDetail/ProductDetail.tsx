@@ -70,6 +70,14 @@ const ProductDetail = () => {
             <ImageGallery Images={product.images}/>
           </div>
         </div>
+        <div className="mt-40">
+          <p className="text-[#2E8B57] font-demiBold text-lg">
+            توضیحات
+          </p>
+          <p className="font-regular mt-4  text-base text-[#727272]">
+              {product.description}
+          </p>
+        </div>
       </div>
     </Fragment>
   );
