@@ -1,0 +1,78 @@
+"use client";
+import React, { Fragment, useState } from "react";
+import ProductDetailData from "./ProductDetailData";
+import Image from "next/image";
+import Color from "@/assent/Imge/Product/ProductDetail/color.svg";
+import Plus from "@/assent/Imge/Product/ProductDetail/Plus.svg";
+import Link from "next/link";
+import ImageGallery from "./ImageProduct";
+
+
+
+const ProductDetail = () => {
+  const [counter, setCounter] = useState(0);
+  const { ProductDetail } = ProductDetailData();
+  const product = ProductDetail[0];
+
+  function posetive() {
+    setCounter(counter + 1);
+  }
+  function negtiv() {
+    if (counter > 0) {
+      setCounter(counter - 1);
+    }
+  }
+ 
+  return (
+    <Fragment>
+      <div className="px-20">
+        <div className="flex mt-32 justify-between ">
+          <div>
+            <p className="font-demiBold text-xl text-[#3A3A3A] leading-8">
+              {product.productTitle}
+            </p>
+
+            <p className="font-medium mt-9 text-base text-[#727272] leading-7">
+              {product.productDetail}
+            </p>
+
+            <p className="font-medium mt-12 text-lg text-[#3A3A3A] leading-7">
+              <span className="text-[#727272]">قیمت :</span> {product.price}{" "}
+              تومان
+            </p>
+            <p className="font-medium mt-12 text-base text-[#727272] leading-7">
+              انتخاب رنگ :
+            </p>
+            <Image
+              src={Color}
+              width={191}
+              height={27}
+              alt=""
+              className="mt-3"
+            />
+            <div className="flex gap-6 items-center mt-12 ">
+              <p className="text-[#727272] text-base font-medium mt-9">
+                تعداد:
+              </p>
+              <div className="flex flex-row mt-9 gap-4">
+                <Image onClick={() => posetive()} src={Plus} alt="" />
+                <span>{counter}</span>
+                <Image onClick={() => negtiv()} src={Plus} alt="" />
+              </div>
+            </div>
+            <Link href="/Resevaion/SetTime">
+              <button className="mt-10 duration-300 bg-[#54896b] hover:bg-[#2E8B57] text-white w-[98%] h-12 rounded-xl">
+              افزودن به سبد خرید
+              </button>
+            </Link>
+          </div>
+          <div className="xl:-mt-10">
+            <ImageGallery Images={product.images}/>
+          </div>
+        </div>
+      </div>
+    </Fragment>
+  );
+};
+
+export default ProductDetail;
