@@ -42,7 +42,7 @@ const ImageGallery = ({ Images }: { Images: string[] }) => {
       </div>
 
       <div className="flex thumbnails items-center">
-      <div onClick={handleNext}>
+      <div onClick={handlePrev}>
           <Image src={chevronRightImage} width={24} height={24} alt="" />
         </div>
       
@@ -59,7 +59,7 @@ const ImageGallery = ({ Images }: { Images: string[] }) => {
             />
           ))}
         </div>
-        <div onClick={handlePrev}>
+        <div onClick={handleNext}>
           <Image src={chevronLeftImage} width={24} height={24} alt="" />
         </div>
       </div>
