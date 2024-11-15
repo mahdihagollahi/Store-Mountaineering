@@ -1,6 +1,6 @@
 "use client";
 import React, { Fragment, useState } from "react";
-import ProductData from "@/component/Products/ProductData";
+import ProductData from "@/component/Products/Product/ProductData";
 import ProductRout from "@/assent/Imge/Product/ProductRout.svg";
 import Image from "next/image";
 import FilterProduct from "./FilterProduct";

@@ -1,14 +1,13 @@
+import React, { Fragment } from "react";
 import Navbar from "@/component/Navbar/Navbar";
 import Header from "@/component/Products/Product/Header";
-import Product from "@/component/Products/Product/Product";
-import React, { Fragment } from "react";
-
+import ProductDetail from "@/component/Products/ProductDetail/ProductDetail";
 const page = () => {
   return (
     <Fragment>
       <Header />
       <Navbar />
-      <Product />
+      <ProductDetail />
     </Fragment>
   );
 };

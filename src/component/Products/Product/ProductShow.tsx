@@ -1,52 +1,37 @@
 import React, { Fragment } from "react";
 import Image from "next/image";
-import ColorImage from '@/assent/Imge/Product/Color.svg'
+import ColorImage from "@/assent/Imge/Product/Color.svg";
 import Link from "next/link";
-import BasketImage from '@/assent/Imge/Product/basket.svg'
+import BasketImage from "@/assent/Imge/Product/basket.svg";
 
 const ProductShow = ({ currentPageData, filledHeart, handleHeartClick }) => {
   return (
     <Fragment>
       {currentPageData.map((treatment, index) => (
-      
-
         <div
           key={index}
           className="w-60 relative h-80 px-2 rounded-xl bg-[#FFFFFF] shadow transition-transform duration-300 hover:scale-105 group"
         >
-          <Link href="">
+          <Link href="/product/productdetail">
             <Image src={treatment.src} width={224} height={141} alt="" />
             <p className="text-[#3A3A3A]  font-demiBold text-base mt-1">
-            {treatment.name}
+              {treatment.name}
             </p>
 
             <p className="font-medium text-base mt-2 leading-6 text-[#565656]">
               مدل
-              {'  '}     {treatment.model}  
+              {"  "} {treatment.model}
             </p>
             <div className="flex justify-between mt-3 items-center">
-               <p className="font-medium text-base text-[#565656]">
-               رنگ بندی :
-               </p>
-               <Image
-               src={ColorImage}
-               width={83}
-               height={17}
-               alt=""
-               />
+              <p className="font-medium text-base text-[#565656]">رنگ بندی :</p>
+              <Image src={ColorImage} width={83} height={17} alt="" />
             </div>
             <div className="flex justify-between mt-10 items-center">
-             <p className="font-demiBold text-base text-[#3A3A3A] leading-6">
-              قیمت
- :  {treatment.price}
-      تومان
-             </p>
-             <Image
-             src={BasketImage}
-             width={24}
-             height={24}
-             alt=""
-             />
+              <p className="font-demiBold text-base text-[#3A3A3A] leading-6">
+                قیمت : {treatment.price}
+                تومان
+              </p>
+              <Image src={BasketImage} width={24} height={24} alt="" />
             </div>
           </Link>
           <div className="flex items-center">
@@ -56,7 +41,7 @@ const ProductShow = ({ currentPageData, filledHeart, handleHeartClick }) => {
               viewBox="0 0 24 24"
               strokeWidth="1.5"
               stroke="currentColor"
-              className=" text-[#3A3A3A] absolute top-3   cursor-pointer   size-6 hover:fill-[#D20404]"
+              className=" text-[#3A3A3A] hover:text-inherit absolute top-3   cursor-pointer   size-7 hover:fill-[#D20404]"
               onClick={() => handleHeartClick(index)}
             >
               <path
