@@ -7,6 +7,7 @@ import Plus from "@/assent/Imge/Product/ProductDetail/Plus.svg";
 import Link from "next/link";
 import ImageGallery from "./ImageProduct";
 import ProductFeature from "./ProductFeature";
+import ProductComment from "./ProductComment";
 
 const ProductDetail = () => {
   const [counter, setCounter] = useState(0);
@@ -77,8 +78,29 @@ const ProductDetail = () => {
         </div>
 
         <div className="mt-40">
-          <ProductFeature product={product}/>
+          <ProductFeature product={product} />
         </div>
+
+        <div className="mt-40">
+          <ProductComment ProductDetail={ProductDetail} />
+        </div>
+
+        <div className="mt-10 ">
+          <p className="font-medium text-2xl text-[#393939]">
+            نظرات خودتان را با ما به اشتراک بگذارید:
+          </p>
+
+          <p className="font-regular text-base mt-10 text-[#3A3A3A]">پیام:</p>
+
+          <textarea
+           placeholder="لطفا پیام خودرا بنویسید"
+            className=" w-[884px] px-5 py-4 mt-5 h-[177px] "
+          ></textarea>
+           
+        </div>
+        <button className="mt-10   bg-[#2E8B57] rounded-xl py-2 px-4 w-[9%] h-[12%] text-base text-[#FFFFFF] font-medium">
+           ثبت نظر
+        </button>
       </div>
     </Fragment>
   );
