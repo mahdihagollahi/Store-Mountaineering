@@ -13,7 +13,7 @@ const BrandShow = () => {
           key={items.id}
           className="w-80 relative h-32 px-2  rounded-xl transition-transform duration-300 hover:scale-105 group"
         >
-          <Link href="/productshow">
+          <Link href="/brand/brandproduct">
             <div className="flex items-center gap-2 ">
               <Image src={items.src} width={246} height={135} alt="" />
               <div className="flex flex-col items-center">
