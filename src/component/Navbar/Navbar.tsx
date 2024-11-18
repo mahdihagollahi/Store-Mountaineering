@@ -47,13 +47,13 @@ function Navbar() {
             </button>
           </Link>
 
-          <Link href="/Doctors">
+          <Link href="/brand">
             <button className="cursor-pointer">
               <p
-                   style={pathName === "/" ? { color: "#4BB09C" } : {}}
+                   style={pathName === "/brand" ? { color: "#4BB09C" } : {}}
                    className={`w-20 font-demiBold text-base whitespace-nowrap 
                      ${
-                       pathName === "/"
+                       pathName === "/brand"
                          ? " text-[#2E8B57] pb-[2px] w-[90px] text-lg mt-[1px] leading-7 font-bold duration-300"
                          : "text-[#727272]"
                      }
