@@ -64,13 +64,13 @@ function Navbar() {
               </button>
             </Link>
 
-            <Link href="/Article">
+            <Link href="/mountaineeringmagazine">
               <button className="cursor-pointer">
                 <p
-                  style={pathName === "/" ? { color: "2E8B57" } : {}}
+                  style={pathName === "/mountaineeringmagazine" ? { color: "2E8B57" } : {}}
                   className={`w-20 font-demiBold text-base whitespace-nowrap 
                      ${
-                       pathName === "/"
+                       pathName === "/mountaineeringmagazine"
                          ? " text-[#2E8B57] pb-[2px] w-[90px] text-lg mt-[1px] leading-7 font-bold duration-300"
                          : "text-[#727272]"
                      }
