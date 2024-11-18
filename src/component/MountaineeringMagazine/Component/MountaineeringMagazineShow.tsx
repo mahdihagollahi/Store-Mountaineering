@@ -7,7 +7,7 @@ const MountaineeringMagazineShow = ({ currentPageData }) => {
   return (
     <Fragment>
       {currentPageData.map((items) => (
-        <Link href="/" key={items.id}>
+        <Link href="/mountaineeringmagazine/mountaineeringmagazineDetail" key={items.id}>
           <div className="w-[100%] ">
             <div className="flex  ">
               <Image
@@ -40,7 +40,7 @@ const MountaineeringMagazineShow = ({ currentPageData }) => {
                   </div>
                 
                     <button>
-                    <Link href="/" >
+                    <Link href="/mountaineeringmagazine/mountaineeringmagazineDetail" >
                       <Image src={ArrowImage} height={32} width={32} alt="" />
                       </Link>
                     </button>
