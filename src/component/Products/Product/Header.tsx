@@ -1,10 +1,12 @@
 import React, { Fragment } from "react";
 import Logo from "@/assent/Imge/Product/Logo.svg";
 import Image from "next/image";
+import Link from "next/link";
 const Header = () => {
   return (
     <Fragment>
       <div className="px-20 bg-white py-4 flex justify-between">
+        <Link href="/">
         <div className="flex items-center  gap-4 ">
           <div>
             <Image src={Logo} width={33} height={37} alt="" />
@@ -15,6 +17,7 @@ const Header = () => {
             </p>
           </div>
         </div>
+        </Link>
         <div className="">
           <label className="input input-bordered flex items-center gap-2" 
           style={{background:'#f8f8f8'}}
